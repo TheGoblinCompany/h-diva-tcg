@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Expansiones - H-Diva TCG</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff69b4;
+      text-align: center;
+    }
+    .expansion-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .expansion-card {
+      background: #222;
+      border: 2px solid #ff69b4;
+      border-radius: 10px;
+      width: 200px;
+      padding: 10px;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .expansion-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #ff69b4;
+    }
+    .expansion-card img {
+      width: 100%;
+      height: 280px; /* proporción vertical */
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .expansion-card h2 {
+      margin: 10px 0 5px;
+      font-size: 1.2em;
+      color: #ff69b4;
+    }
+    .expansion-card p {
+      font-size: 0.9em;
+      color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Expansiones de H-Diva TCG</h1>
+
+  <div class="expansion-list">
+    <a href="expansion-luz.html" class="expansion-card">
+      <img src="portadas/luz.jpg" alt="Portada Expansión Luz" />
+      <h2>Expansión Luz</h2>
+      <p>Descubre la primera expansión con waifus del Origen Día, llenas de Encanto y Virtud para conquistar el campo de batalla.</p>
+    </a>
+
+    <a href="expansion-sombra.html" class="expansion-card">
+      <img src="portadas/sombra.jpg" alt="Portada Expansión Sombra" />
+      <h2>Expansión Sombra</h2>
+      <p>Una expansión oscura y peligrosa que trae waifus de Origen Noche, con habilidades de engaño y estrategia sutil.</p>
+    </a>
+
+    <a href="expansion-futuro.html" class="expansion-card">
+      <img src="portadas/futuro.jpg" alt="Portada Expansión Futuro" />
+      <h2>Expansión Futuro</h2>
+      <p>La tecnología y el misterio se unen en esta expansión futurista, perfecta para amantes de lo cyber y lo desconocido.</p>
+    </a>
+  </div>
+
+</body>
+</html>
