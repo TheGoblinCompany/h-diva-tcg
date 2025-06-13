@@ -2,56 +2,161 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>H-Diva TCG - Waifu World Wars</title>
   <style>
+    :root {
+      --bg-dark: #1a1a1a;
+      --text-light: #f0f0f0;
+      --accent: #ff69b4; /* rosa waifu */
+      --section-bg: #222;
+    }
     body {
-      background-color: #1a1a2e;
-      color: #eaeaea;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      scroll-behavior: smooth;
     }
     header {
-      background: #16213e;
-      padding: 20px;
-      text-align: center;
-      font-size: 2em;
+      background: #111;
+      padding: 15px 30px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--accent);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.5em;
+      color: var(--accent);
+    }
+    nav a {
+      color: var(--text-light);
+      margin: 0 10px;
+      text-decoration: none;
       font-weight: bold;
-      letter-spacing: 3px;
-      color: #fca311;
     }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+    nav a:hover {
+      color: var(--accent);
     }
-    h2 {
-      color: #fca311;
+    section {
+      padding: 100px 20px 60px;
+      max-width: 1000px;
+      margin: auto;
+      border-bottom: 1px solid #333;
     }
-    p {
-      line-height: 1.5;
-      font-size: 1.1em;
+    .hero {
+      text-align: center;
+      background: var(--section-bg);
+    }
+    .hero img {
+      max-width: 100%;
+      border: 4px solid var(--accent);
+      border-radius: 12px;
+    }
+    .hero h2 {
+      margin-top: 20px;
+      font-size: 2em;
+      color: var(--accent);
+    }
+    .button-disabled {
+      background: #555;
+      color: #ccc;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: not-allowed;
+      margin-top: 20px;
     }
     footer {
-      background: #0f3460;
+      background: #111;
       text-align: center;
-      color: #a3cef1;
-      padding: 10px;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      padding: 20px;
       font-size: 0.9em;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <header>H-Diva TCG</header>
-  <main>
-    <h2>¡Bienvenido a Waifu World Wars!</h2>
-    <p>Un juego de cartas para mayores de 17, donde la disputa es cuestión de Encanto, Virtud y mucha estrategia.</p>
-    <p>Pronto más contenido, galerías de cartas y ¡mucho más!</p>
-  </main>
-  <footer>© 2025 H-Diva TCG - Waifu World Wars</footer>
+
+  <header>
+    <h1>H-Diva TCG</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#cartas">Cartas</a>
+      <a href="#como-jugar">Cómo jugar</a>
+      <a href="#descargas">Descargas</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#contacto">Comunidad</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <img src="imagen-destacada.jpg" alt="Imagen destacada de H-Diva TCG" />
+    <h2>¡Disputa, Encanta, Triunfa!</h2>
+    <p>El juego de cartas +17 donde las waifus luchan por la supremacía en Waifu World Wars.</p>
+    <button class="button-disabled">Juega Gratis (Próximamente)</button>
+    <p style="margin-top:10px; color: #aaa;">Versión para PC en desarrollo. Se lanzará cuando se complete la traducción de todas las cartas actuales.</p>
+  </section>
+
+  <section id="sobre">
+    <h2>¿Qué es H-Diva TCG?</h2>
+    <p>H-Diva TCG es un juego de cartas coleccionables +17 protagonizado por poderosas waifus que disputan con Encanto, Virtud y actitud. El juego combina estrategia, provocación e imaginación dentro del universo de Waifu World Wars.</p>
+
+    <h3>Mecánicas clave</h3>
+    <ul>
+      <li><strong>Encanto:</strong> tu capacidad de seducción en cada jugada.</li>
+      <li><strong>Virtud:</strong> la defensa emocional de tus waifus.</li>
+      <li><strong>Disputa:</strong> el alma del juego: ¿quién ganará el corazón de la partida?</li>
+    </ul>
+
+    <h3>Lore breve</h3>
+    <p>Waifu World Wars es un universo donde facciones de waifus de distintos orígenes luchan por el control del Deseo Supremo. Solo una diva puede reinar en el tablero.</p>
+  </section>
+
+  <section id="cartas">
+    <h2>Cartas y Expansiones</h2>
+    <p>Pronto podrás explorar cartas destacadas por expansión y navegar por la galería interactiva.</p>
+    <p>(Galería en construcción... ¡espera mucho waifu-poder!)</p>
+  </section>
+
+  <section id="como-jugar">
+    <h2>Cómo jugar</h2>
+    <p>En esta sección encontrarás el tutorial paso a paso y acceso al manual en PDF.</p>
+    <p>Próximamente: videos, guías y estrategias.</p>
+  </section>
+
+  <section id="descargas">
+    <h2>Descargas y Tienda</h2>
+    <ul>
+      <li>📘 Manual (PDF) — próximamente</li>
+      <li>🖨️ Print & Play — próximamente</li>
+      <li>💻 Descarga H-DivaPro — próximamente</li>
+    </ul>
+    <p>Todo se habilitará conforme se complete la traducción de las cartas y se lance el cliente.</p>
+  </section>
+
+  <section id="noticias">
+    <h2>Noticias y Blog</h2>
+    <p>Próximamente: anuncios, actualizaciones de expansión, votaciones de la comunidad y lore extra.</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Comunidad y Contacto</h2>
+    <p>¿Te gusta el proyecto? Apóyanos en Patreon (enlace pronto).</p>
+    <p>Equipo creativo: Manolo y sus waifus legendarias.</p>
+    <p>Pronto: formulario de contacto y canal de Discord.</p>
+  </section>
+
+  <footer>
+    © 2025 H-Diva TCG – Todos los derechos reservados. Contenido para mayores de 17 años.
+  </footer>
 </body>
 </html>
