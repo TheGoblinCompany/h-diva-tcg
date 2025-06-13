@@ -85,6 +85,28 @@
 </head>
 <body>
 
+<!-- Advertencia de contenido explícito -->
+<div id="aviso-explicito" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#000c; color:#fff; display:flex; flex-direction: column; justify-content:center; align-items:center; z-index:9999;">
+  <div style="background:#222; padding:30px; border-radius:12px; max-width:400px; text-align:center;">
+    <h2 style="color:#ff69b4; margin-bottom:15px;">Advertencia de Contenido Explícito</h2>
+    <p>Esta página contiene material para mayores de 17 años. Si eres menor, por favor abandona este sitio.</p>
+    <button id="btn-entrar" style="margin-top:20px; background:#ff69b4; border:none; padding:10px 25px; border-radius:8px; color:#111; font-weight:bold; cursor:pointer;">Entrar al sitio</button>
+  </div>
+</div>
+
+<script>
+  // Mostrar aviso si no ha aceptado antes
+  if (localStorage.getItem('aceptoExplicito') === 'true') {
+    document.getElementById('aviso-explicito').style.display = 'none';
+  }
+
+  // Botón para aceptar el aviso y ocultarlo
+  document.getElementById('btn-entrar').addEventListener('click', () => {
+    document.getElementById('aviso-explicito').style.display = 'none';
+    localStorage.setItem('aceptoExplicito', 'true');
+  });
+</script>
+
   <header>
     <h1>H-Diva TCG</h1>
     <nav>
