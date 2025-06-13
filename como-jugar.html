@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cómo Jugar - H-Diva TCG</title>
+  <style>
+    body {
+      background: #1a1a1a;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1, h2 {
+      color: #ff69b4;
+      text-align: center;
+    }
+
+    section {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #ff69b4;
+      margin-bottom: 30px;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .faq {
+      margin-top: 10px;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+    }
+
+    .faq-item strong {
+      color: #ff69b4;
+    }
+
+    .download-link {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #ff69b4;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .download-link:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+<div id="menu-container"></div>
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('menu-container').innerHTML = data;
+    });
+</script>
+
+<h1>Cómo Jugar</h1>
+
+<section>
+  <h2>Reglas Básicas</h2>
+  <ol>
+    <li>Cada jugador comienza con 20 PC y un mazo de 40 cartas.</li>
+    <li>Las cartas pueden ser Waifus, Eventos, Desliz o Aliadas.</li>
+    <li>En tu turno puedes Invitar waifus, activar efectos y declarar Disputas.</li>
+    <li>El objetivo es reducir los PC del oponente a 0 o dejarlo sin cartas.</li>
+    <li>Usa Encanto o Virtud según la situación para ganar las Disputas.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Preguntas Frecuentes</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <strong>¿Puedo Invitar Gratis más de una waifu por turno?</strong>
+      <p>No. Solo puedes hacer una Invitación Gratis por turno, salvo que una carta diga lo contrario.</p>
+    </div>
+    <div class="faq-item">
+      <strong>¿Qué pasa si ambas waifus tienen el mismo Encanto en una Disputa?</strong>
+      <p>Ambas son eliminadas y enviadas a la Memoria.</p>
+    </div>
+    <div class="faq-item">
+      <strong>¿Puedo tener más de una waifu del mismo tipo en juego?</strong>
+      <p>Sí, siempre y cuando cada una esté en una Posición diferente.</p>
+    </div>
+  </div>
+</section>
+
+<section style="text-align: center;">
+  <h2>Descarga el Libro de Reglas</h2>
+  <a href="descargas/H-Diva_Libro_de_Reglas.pdf" class="download-link" target="_blank">📘 Descargar PDF</a>
+</section>
+
+<section style="text-align: center;">
+  <h2>Cartas Prohibidas</h2>
+  <p>Consulta la lista actual de cartas prohibidas y ediciones anteriores.</p>
+  <a href="cartas-prohibidas.html" class="download-link">🛑 Ver Cartas Prohibidas</a>
+</section>
+
+<p style="text-align:center; margin-top: 30px;">
+  <a href="index.html" style="color:#ff69b4;">← Volver a Inicio</a>
+</p>
+
+</body>
+</html>
