@@ -8,7 +8,7 @@
     :root {
       --bg-dark: #1a1a1a;
       --text-light: #f0f0f0;
-      --accent: #ff69b4; /* rosa waifu */
+      --accent: #ff69b4;
       --section-bg: #222;
     }
     body {
@@ -43,6 +43,19 @@
     }
     nav a:hover {
       color: var(--accent);
+    }
+    .banner {
+      background: #ff69b4;
+      color: #111;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+      margin-top: 60px; /* deja espacio para el menú fijo */
+    }
+    .banner a {
+      color: #111;
+      text-decoration: underline;
+      font-weight: bold;
     }
     section {
       padding: 100px 20px 60px;
@@ -95,12 +108,9 @@
 </div>
 
 <script>
-  // Mostrar aviso si no ha aceptado antes
   if (localStorage.getItem('aceptoExplicito') === 'true') {
     document.getElementById('aviso-explicito').style.display = 'none';
   }
-
-  // Botón para aceptar el aviso y ocultarlo
   document.getElementById('btn-entrar').addEventListener('click', () => {
     document.getElementById('aviso-explicito').style.display = 'none';
     localStorage.setItem('aceptoExplicito', 'true');
@@ -119,6 +129,12 @@
       <a href="#contacto">Comunidad</a>
     </nav>
   </header>
+
+  <!-- 🚀 Banner destacado -->
+  <div class="banner">
+    📢 A la fecha de <strong>31 de agosto de 2025</strong>, se publica oficialmente el juego con la versión del <strong>Formato VS 2019</strong>.  
+    👉 <a href="https://drive.google.com/file/d/1rgu4e8uBSSd75ufxqRuxU3zq21itDpkh/view?usp=drive_link" target="_blank">Descargar aquí</a>
+  </div>
 
   <section id="inicio" class="hero">
     <img src="imagen-destacada.jpg" alt="Imagen destacada de H-Diva TCG" />
@@ -160,7 +176,7 @@
     <ul>
       <li>📘 Manual (PDF) — próximamente</li>
       <li>🖨️ Print & Play — próximamente</li>
-      <li>💻 Descarga H-DivaPro — https://drive.google.com/file/d/1rgu4e8uBSSd75ufxqRuxU3zq21itDpkh/view?usp=drive_link</li>
+      <li>💻 Descarga H-DivaPro — <a href="https://drive.google.com/file/d/1rgu4e8uBSSd75ufxqRuxU3zq21itDpkh/view?usp=drive_link" target="_blank">Formato VS 2019</a></li>
     </ul>
     <p>Todo se habilitará conforme se complete la traducción de las cartas y se lance el cliente.</p>
   </section>
@@ -176,8 +192,8 @@
     <p>Equipo creativo: Reeves y sus waifus legendarias.</p>
     <p>Pronto: formulario de contacto y canal de Discord.</p>
     <footer style="text-align:center; color:#aaa; margin: 40px 0 20px;">
-    Contacto: <a href="thegoblincompany10@gmail.com" style="color:#ff69b4; text-decoration:none;">thegoblincompany10@gmail.com</a>
-</footer>
+      Contacto: <a href="mailto:thegoblincompany10@gmail.com" style="color:#ff69b4; text-decoration:none;">thegoblincompany10@gmail.com</a>
+    </footer>
   </section>
 
   <footer>
@@ -185,5 +201,3 @@
   </footer>
 </body>
 </html>
-
-
